@@ -1,0 +1,34 @@
+/* style.css */
+
+/* Custom Gradient Background */
+.bg-gradient-to-r {
+    background: linear-gradient(135deg, #f0f4ff, #cfe3ff);
+  }
+  
+  /* Sidebar Link Hover */
+  .sidebar-icon:hover {
+    background-color: #e5f0ff;
+  }
+  
+  .bg-blue-50 {
+    background-color: #f0f9ff;
+  }
+  
+  .bg-blue-100 {
+    background-color: #dbeafe;
+  }
+  
+  .text-blue-600 {
+    color: #2563eb;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+    border-radius: 4px;
+  }
+  

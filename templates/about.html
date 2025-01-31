@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Smart Cane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans min-h-screen flex flex-col">
+    <div class="flex flex-1">
+        <!-- Sidebar with Glass Effect -->
+        <aside class="w-24 bg-white/30 backdrop-blur-md border-r border-white/20 flex flex-col items-center py-6 space-y-6 shadow-lg">
+            <!-- Logo -->
+            <div class="mb-4 transition-transform hover:scale-110 duration-300">
+                <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-xl flex items-center justify-center shadow-lg transform hover:rotate-12 transition-transform duration-300">
+                    <span class="text-white font-bold text-xl">IOT</span>
+                </div>
+            </div>
+            
+            <!-- Navigation Icons -->
+            <nav class="space-y-8">
+              <a href="{{ url_for('dashboard') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-white/50 hover:bg-teal-400 hover:text-white transition-all duration-300 group shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+              </a>
+              <a href="{{ url_for('about') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-teal-400 text-white transition-all duration-300 group shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+              </a>
+              <a href="{{ url_for('our_team') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-white/50 hover:bg-teal-400 hover:text-white transition-all duration-300 group shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2h5m4-4a4 4 0 100-8 4 4 0 000 8zm6 4h-2a2 2 0 012-2v2z" />
+                </svg>
+              </a>              
+              <a href="{{ url_for('how_to_use') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-white/50 hover:bg-teal-400 hover:text-white transition-all duration-300 group shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2v1a1 1 0 001 1h1a1 1 0 001 1h1a1 1 0 001 1v1a1 1 0 01-1 1h-1a1 1 0 00-1 1v1h1v1h1v1h-1a1 1 0 01-1-1v-3a1 1 0 00-1-1h-1a1 1 0 00-1-1v-3c0-1.1.9-2 2-2" />
+                </svg>
+              </a>                         
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8 overflow-y-auto">
+            <h1 class="text-5xl font-bold mb-12 gradient-text" data-aos="fade-down">About Us</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="text-4xl font-extrabold gradient-text">SMART CANE</h2>
+                    <h3 class="text-2xl font-semibold text-gray-700">APA ITU SMART CANE?</h3>
+                    <p class="text-lg leading-relaxed text-gray-600">
+                        Smart Cane adalah aplikasi pendamping untuk tongkat pintar yang dirancang khusus bagi penyandang tunanetra. Dengan teknologi canggih yang terintegrasi melalui sensor dan GPS, aplikasi ini membantu pengguna untuk bergerak lebih aman dan memberikan ketenangan bagi keluarga.
+                    </p>
+                    <div class="flex space-x-4 pt-6">
+                        <button class="bg-gradient-to-r from-teal-400 to-teal-600 text-white px-8 py-3 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <a href="{{ url_for('how_to_use') }}">How To Use?</a>   
+                        </button>
+                        <button class="bg-white text-teal-600 px-8 py-3 rounded-xl border border-teal-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <a href="#">Contact Us</a>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Image/Illustration -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-gradient-to-r from-teal-400/20 to-blue-500/20 rounded-2xl transform rotate-6"></div>
+                    <div class="relative bg-white p-6 rounded-2xl shadow-xl">
+                        <img src="{{ url_for('static', filename='poster.png') }}" alt="Smart Cane Illustration" class="rounded-xl floating" style="max-width: 300px;"/>
+                    </div>
+                    <!-- Feature Cards -->
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                        <div class="bg-white p-4 rounded-xl shadow-lg flex items-center space-x-3 transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold">Smart Detection</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-lg flex items-center space-x-3 transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm font-semibold">Safety First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- content end -->
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

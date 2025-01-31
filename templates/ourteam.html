@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Smart Cane</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-sans min-h-screen flex flex-col">
+    <div class="flex flex-1">
+        <!-- Sidebar -->
+        <aside class="w-24 bg-white/30 backdrop-blur-md border-r border-white/20 flex flex-col items-center py-6 space-y-6 shadow-lg">
+            <!-- Logo -->
+            <div class="mb-4 transition-transform hover:scale-110 duration-300">
+                <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-xl flex items-center justify-center shadow-lg transform hover:rotate-12 transition-transform duration-300">
+                    <span class="text-white font-bold text-xl">IOT</span>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="space-y-8">
+                <a href="{{ url_for('dashboard') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-white/50 hover:bg-teal-400 hover:text-white transition-all duration-300 group shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </a>
+                <a href="{{ url_for('about') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-white/50 hover:bg-teal-400 hover:text-white transition-all duration-300 group shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+                <a href="{{ url_for('our_team') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-teal-400 text-white transition-all duration-300 group shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2h5m4-4a4 4 0 100-8 4 4 0 000 8zm6 4h-2a2 2 0 012-2v2z" />
+                    </svg>
+                </a>              
+                <a href="{{ url_for('how_to_use') }}" class="w-14 h-14 flex items-center justify-center rounded-xl bg-white/50 hover:bg-teal-400 hover:text-white transition-all duration-300 group shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.1 0-2 .9-2 2v1a1 1 0 001 1h1a1 1 0 001 1h1a1 1 0 001 1v1a1 1 0 01-1 1h-1a1 1 0 00-1 1v1h1v1h1v1h-1a1 1 0 01-1-1v-3a1 1 0 00-1-1h-1a1 1 0 00-1-1v-3c0-1.1.9-2 2-2" />
+                    </svg>
+                </a>                              
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <div class="max-w-7xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-16" data-aos="fade-down">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Meet Our Team</h1>
+                    <p class="text-gray-600">The brilliant minds behind Smart Blind Cane</p>
+                </div>
+
+                <!-- Team kitahhh -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Member 1 -->
+                    <div class="group" data-aos="fade-up">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/rena.jpg') }}" alt="Team Member 1" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member1Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Rena Heryani</h3>
+                                <p class="text-teal-500">152022218</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/fathan.jpg') }}" alt="Team Member 2" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member2Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">M. Fathan Hasan</h3>
+                                <p class="text-teal-500">152022233</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/fahreza.jpg') }}" alt="Team Member 3" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member3Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Fahreza Riana Atharik</h3>
+                                <p class="text-teal-500">152022238</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/rafli.jpg') }}" alt="Team Member 4" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member4Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Rafli Nugraha</h3>
+                                <p class="text-teal-500">152022254</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member 5 -->
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/piter.jpg') }}" alt="Team Member 5" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member5Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Juviter Siburian</h3>
+                                <p class="text-teal-500">152022255</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member 6 -->
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/umar.jpg') }}" alt="Team Member 6" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member6Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">M. Umar Maruapey</h3>
+                                <p class="text-teal-500">152022264</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member 7 -->
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden rounded-2xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="{{ url_for('static', filename='team/helen.jpg') }}" alt="Team Member 7" class="w-full h-64 object-cover rounded-xl cursor-pointer transition-transform duration-300 group-hover:scale-105" onclick="openModal('member7Modal')"/>
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-gray-800">Helen Ayudia Yunita</h3>
+                                <p class="text-teal-500">152022265</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional team members would follow the same pattern -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Templates 1 -->
+    <div id="member1Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Rena Heryani</h2>
+                <button onclick="closeModal('member1Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/rena.jpg') }}" alt="rena" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">Rena Heryani berperan dalam pengembangan aplikasi mobile yang akan digunakan pada project IOT yang kami buat.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Mobile Development</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+    <!-- Modal Templates 2 -->
+    <div id="member2Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">M. Fathan Hasan</h2>
+                <button onclick="closeModal('member2Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/fathan.jpg') }}" alt="fathan" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">Pada project kali ini Fathan berperan sebagai design produk untuk tongkat yang akan di buat.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Design Product</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+    <!-- Modal Templates 3 -->
+    <div id="member3Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Fahreza Riana Atharik</h2>
+                <button onclick="closeModal('member3Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/fahreza.jpg') }}" alt="eja" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">Pada project ini Fahreza bertugas sebagai perancang alat iot ini dan pengembang alat iot ini.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">IoT Developer</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">IoT Designer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+    <!-- Modal Templates 4 -->
+    <div id="member4Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Rafli Nugraha</h2>
+                <button onclick="closeModal('member4Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/rafli.jpg') }}" alt="eja" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">Rafli bertugas sebagai pengatur backend dan pengembang alat iot.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">IoT Developer</span>
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Backend Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+    <!-- Modal Templates 5 -->
+    <div id="member5Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Juviter Siburian</h2>
+                <button onclick="closeModal('member5Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/piter.jpg') }}" alt="eja" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">Juviter berperan sebagai pengembang alat iot.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">IoT Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+    <!-- Modal Templates 6 -->
+    <div id="member6Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">M. Umar Maruapey</h2>
+                <button onclick="closeModal('member6Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/umar.jpg') }}" alt="eja" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">>Pada project kali ini Umar berperan sebagai design produk untuk tongkat yang akan di buat.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">IoT Designer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+    <!-- Modal Templates 7 -->
+    <div id="member7Modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 transform transition-all duration-300 scale-0">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-2xl font-bold text-gray-800">Helen Ayudia Yunita</h2>
+                <button onclick="closeModal('member7Modal')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="{{ url_for('static', filename='team/helen.jpg') }}" alt="eja" class="w-full h-64 object-cover rounded-xl"/>
+                <p class="text-gray-600">Pada project kali ini Helen berperan sebagai pengembang website untuk monitoring alat IoT.</p>
+                <div class="flex space-x-4">
+                    <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Website Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal template -->
+
+
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modal.querySelector('.scale-0').classList.remove('scale-0');
+            }, 10);
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.querySelector('.scale-0').classList.add('scale-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('fixed')) {
+                const modalId = event.target.id;
+                closeModal(modalId);
+            }
+        }
+    </script>
+</body>
+</html>

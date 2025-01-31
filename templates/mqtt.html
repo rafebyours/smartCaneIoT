@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Simple Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.0/paho-mqtt.min.js"></script>
+</head>
+<body>
+    <h1>MQTT Connection Example</h1>
+    <button id="connectButton">Connect & Send Payload</button>
+
+    <script>
+        const connectButton = document.getElementById('connectButton');
+
+        connectButton.onclick = function() {
+            // MQTT Client Setup
+            const client = new Paho.MQTT.Client('broker.hivemq.com', 1883, 'clientId_' + Date.now());
+            const options = {
+                onSuccess: () => {
+                    console.log('Connected');
+                    const message = new Paho.MQTT.Message('1');
+                    message.destinationName = 'smartCane';
+                    client.send(message);
+                    console.log('Sent payload: 1');
+                },
+                onFailure: (error) => {
+                    console.log('Connection failed: ' + error.errorMessage);
+                }
+            };
+
+            // Connect to the broker
+            client.connect(options);
+        };
+    </script>
+</body>
+</html>
